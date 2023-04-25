@@ -22,3 +22,5 @@ jobs:
 
       - run: |
           cat /home/runner/.npm/_logs/*.log
+          file /home/runner/work/actions-repro/actions-repro/node_modules/cloudflared/bin/cloudflared
+          type /home/runner/work/actions-repro/actions-repro/node_modules/cloudflared/bin/cloudflared
