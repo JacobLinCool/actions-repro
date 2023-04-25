@@ -11,10 +11,14 @@ jobs:
     name: Run
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - continue-on-error: true
+        run: |
           echo "Start"
           npm init -y
           npm i cloudflared
           npm list
           npx cloudflared bin
           npx cloudflared -v
+
+      - run: |
+          cat /home/runner/.npm/_logs/*.log
